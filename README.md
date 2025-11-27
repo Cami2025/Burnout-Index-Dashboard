@@ -43,3 +43,28 @@ CALCULATE(COUNTROWS(Cargalaboral), Cargalaboral[Burnout_Categoria] = "Alto")
 
 Porcentaje_Riesgo_Alto =
 DIVIDE([Colabs Riesgo Alto], [Total Colaboradores])
+
+
+📌 KPIs Principales
+
+Promedio Burnout
+
+Total Colaboradores (600)
+
+Colaboradores con Riesgo Alto (33)
+
+% de Riesgo Alto (5.5%) ````md
+
+📊 Visualizaciones Incluidas
+
+Promedio de Burnout por Área
+
+Distribución Bajo / Medio / Alto
+
+Segmentadores por Área, Rol y Jornada
+
+Gráfico circular de riesgo
+
+KPIs destacados en la parte superior
+
+Ejemplo de diseño:
