@@ -1,23 +1,29 @@
 # 🔥 Workload & Burnout Analytics Dashboard  
-### Monitoring Burnout Index, High-Risk Employees, and Workload by Department
+### Monitoring Burnout Index, High-Risk Employees, and Burnout Distribution by Department
 
-This project visualizes and analyzes employee burnout levels across an organization of 600 workers using **Power BI**, **Google Sheets**, and **People Analytics**.  
-The dashboard identifies high-risk groups, highlights departmental trends, and supports evidence-based decision-making to improve employee well-being.
+This project analyzes employee burnout levels across an organization of 600 workers using **Power BI**, **Google Sheets**, and **People Analytics** principles.  
+The dashboard identifies high-risk employees, highlights department-level patterns, and supports data-driven decision-making to improve workplace well-being.
 
 ---
 
-## 🧠 Methodology
+## 📸 Dashboard Overview  
+![Dashboard Preview](./images/portada.png)
+
+---
+
+## 🧠 Project Methodology
 
 ### 1. Data Cleaning & Standardization
-- Removal of duplicates and inconsistent records  
-- Burnout Index scale adjustment:  
-  Original scale **0–60** → Final scale **0–10**  
-- Categorization into:
-  - **Low**
-  - **Medium**
+- Removal of duplicated or inconsistent records  
+- Adjustment of original burnout scale:  
+  - Original scale: **0–60**  
+  - Final scale: **0–10**  
+- Creation of risk categories:  
+  - **Low**  
+  - **Medium**  
   - **High**
 
-### 2. Power BI Measures (DAX)
+### 2. KPI Calculations with DAX
 
 ```DAX
 BurnoutIndex_Final =
@@ -38,35 +44,37 @@ DIVIDE([Colabs Riesgo Alto], [Total Colaboradores])
 
 ---
 
-## 📌 Key Performance Indicators (KPIs)
+## 📌 Key Performance Indicators (KPIs)  
+![Key KPIs](./images/kpis.png)
 
-- **Average Burnout Score**
-- **Total Employees (600)**
-- **Employees at High Risk (33)**
-- **% of High-Risk Employees (5.5%)**
+- **Average Burnout Score**  
+- **Total Employees: 600**  
+- **Employees at High Risk: 33**  
+- **% of High-Risk Employees: 5.5%**
 
 ---
 
-## 📊 Dashboard Visualizations
+## 📊 Included Visualizations
 
-- Burnout Average by Department  
-- Distribution of Low / Medium / High Categories  
-- Slicers for Department, Role, and Work Schedule  
-- Burnout Risk Pie Chart  
-- Top KPI Cards  
+### 🔍 Burnout Average by Department  
+![Burnout by Area](./images/burnout_por_area.png)
 
-### Dashboard Preview
+### 📈 Low / Medium / High Distribution  
+![Category Distribution](./images/distribucion.png)
 
-![Dashboard Preview](./images/dashboard_preview.png)
+Additional visuals include:
+- Department comparison  
+- Category distribution  
+- Slicers for **Department**, **Role**, and **Shift type**
 
 ---
 
 ## 🧰 Tools & Technologies
 
-- **Power BI**
-- **Google Sheets**
-- **DAX**
-- **GitHub**
+- **Power BI**  
+- **Google Sheets**  
+- **DAX (Data Analysis Expressions)**  
+- **GitHub**  
 - **People Analytics**
 
 ---
@@ -75,9 +83,9 @@ DIVIDE([Colabs Riesgo Alto], [Total Colaboradores])
 
 ```
 /Burnout-Analytics-Dashboard
-    ├── Burnout.pbix               # Power BI dashboard file
-    ├── data/                      # Clean and processed dataset
-    ├── images/                    # Dashboard screenshots
+    ├── Burnout.pbix               # Main Power BI dashboard file
+    ├── data/                      # Clean dataset
+    ├── images/                    # Dashboard images and previews
     └── README.md                  # Project documentation
 ```
 
@@ -87,29 +95,29 @@ DIVIDE([Colabs Riesgo Alto], [Total Colaboradores])
 
 1. Download the **Burnout.pbix** file  
 2. Open it using **Power BI Desktop**  
-3. (Optional) Connect your own dataset  
-4. Explore insights by department, role, and burnout level  
+3. (Optional) Connect your own HR dataset  
+4. Explore insights by department, category, and risk level  
 
 ---
 
 ## 💡 Key Insights
 
-- Clinical departments show the highest burnout averages  
-- 33 employees fall under **High Risk**  
-- 5.5% of the workforce needs immediate intervention  
-- Burnout distribution helps guide organizational well-being strategies  
+- Clinical departments show higher burnout levels  
+- 33 employees are categorized as **High Risk**  
+- Burnout distribution shows a majority in **Low** and **Medium**  
+- The 5.5% high-risk rate helps prioritize targeted interventions  
 
 ---
 
 ## 👩‍💻 Author
 
 **Camila Álvarez**  
-Specialist in Physical Activity, Workplace Wellness & People Analytics  
+Physical Activity Specialist, Workplace Wellness & People Analytics  
 GitHub: https://github.com/Cami2025  
 
 ---
 
 ## ⭐ Support the Project
 
-If you found this project valuable, feel free to give it a **⭐ star** on GitHub!  
-It helps showcase my work and encourages me to continue building powerful analytics solutions.
+If you found this project useful, feel free to give the repository a **⭐ star**!  
+Your support helps showcase my work and encourages the creation of more analytics projects.
