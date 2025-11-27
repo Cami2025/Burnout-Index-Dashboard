@@ -1,70 +1,115 @@
-# 🔥 Carga Laboral & Burnout Analytics Dashboard  
-### Monitoreo del Índice de Burnout, Riesgo Alto y Carga Laboral por Área
+# 🔥 Workload & Burnout Analytics Dashboard  
+### Monitoring Burnout Index, High-Risk Employees, and Workload by Department
 
-Este proyecto visualiza y analiza el nivel de burnout laboral en una organización de 600 colaboradores, utilizando **Power BI**, **Google Sheets** y **People Analytics**.  
-El dashboard permite identificar áreas críticas, distribución de riesgo, perfiles más afectados y oportunidades de intervención para mejorar el bienestar laboral.
-
----
-
-## 📊 Objetivo del Proyecto
-
-El propósito de este dashboard es:
-
-- Medir el **Burnout Index** de cada colaborador.
-- Identificar **colaboradores en riesgo alto**.
-- Analizar el burnout **por área**, **rol** y **jornada**.
-- Mostrar la distribución **Bajo / Medio / Alto**.
-- Facilitar decisiones de bienestar basadas en datos (People Analytics).
+This project visualizes and analyzes employee burnout levels across an organization of 600 workers using **Power BI**, **Google Sheets**, and **People Analytics**.  
+The dashboard identifies high-risk groups, highlights departmental trends, and supports evidence-based decision-making to improve employee well-being.
 
 ---
 
-## 🧠 Metodología
+## 🧠 Methodology
 
-### 1. **Limpieza y estandarización del dataset**
-- Eliminación de duplicados y registros corruptos.
-- Corrección de escalas:  
-  El índice original (0–60) se ajustó a una escala estándar (0–10).
-- Creación de categorías:
-  - **Bajo**
-  - **Medio**
-  - **Alto**  
-  Basado en puntos de corte definidos según literatura de burnout.
+### 1. Data Cleaning & Standardization
+- Removal of duplicates and inconsistent records  
+- Burnout Index scale adjustment:  
+  Original scale **0–60** → Final scale **0–10**  
+- Categorization into:
+  - **Low**
+  - **Medium**
+  - **High**
 
-### 2. **Cálculos en Power BI (DAX)**
-Se construyeron medidas clave:
+### 2. Power BI Measures (DAX)
 
 ```DAX
-BurnoutIndex_Final = DIVIDE(Cargalaboral[BurnoutIndex_NEW], 6)
+BurnoutIndex_Final =
+DIVIDE(Cargalaboral[BurnoutIndex_NEW], 6)
 
-Total Colaboradores = COUNTROWS(Cargalaboral)
+Total Colaboradores =
+COUNTROWS(Cargalaboral)
 
 Colabs Riesgo Alto =
-CALCULATE(COUNTROWS(Cargalaboral), Cargalaboral[Burnout_Categoria] = "Alto")
+CALCULATE(
+    COUNTROWS(Cargalaboral),
+    Cargalaboral[Burnout_Categoria] = "Alto"
+)
 
 Porcentaje_Riesgo_Alto =
 DIVIDE([Colabs Riesgo Alto], [Total Colaboradores])
+```
 
+---
 
-📌 KPIs Principales
+## 📌 Key Performance Indicators (KPIs)
 
-Promedio Burnout
+- **Average Burnout Score**
+- **Total Employees (600)**
+- **Employees at High Risk (33)**
+- **% of High-Risk Employees (5.5%)**
 
-Total Colaboradores (600)
+---
 
-Colaboradores con Riesgo Alto (33)
+## 📊 Dashboard Visualizations
 
-% de Riesgo Alto (5.5%) ````md
+- Burnout Average by Department  
+- Distribution of Low / Medium / High Categories  
+- Slicers for Department, Role, and Work Schedule  
+- Burnout Risk Pie Chart  
+- Top KPI Cards  
 
-📊 Visualizaciones Incluidas
+### Dashboard Preview
 
-Promedio de Burnout por Área
+![Dashboard Preview](./images/dashboard_preview.png)
 
-Distribución Bajo / Medio / Alto
+---
 
-Segmentadores por Área, Rol y Jornada
+## 🧰 Tools & Technologies
 
-Gráfico circular de riesgo
+- **Power BI**
+- **Google Sheets**
+- **DAX**
+- **GitHub**
+- **People Analytics**
 
-KPIs destacados en la parte superior
+---
 
-Ejemplo de diseño:
+## 📁 Repository Structure
+
+```
+/Burnout-Analytics-Dashboard
+    ├── Burnout.pbix               # Power BI dashboard file
+    ├── data/                      # Clean and processed dataset
+    ├── images/                    # Dashboard screenshots
+    └── README.md                  # Project documentation
+```
+
+---
+
+## 🚀 How to Use This Project
+
+1. Download the **Burnout.pbix** file  
+2. Open it using **Power BI Desktop**  
+3. (Optional) Connect your own dataset  
+4. Explore insights by department, role, and burnout level  
+
+---
+
+## 💡 Key Insights
+
+- Clinical departments show the highest burnout averages  
+- 33 employees fall under **High Risk**  
+- 5.5% of the workforce needs immediate intervention  
+- Burnout distribution helps guide organizational well-being strategies  
+
+---
+
+## 👩‍💻 Author
+
+**Camila Álvarez**  
+Specialist in Physical Activity, Workplace Wellness & People Analytics  
+GitHub: https://github.com/Cami2025  
+
+---
+
+## ⭐ Support the Project
+
+If you found this project valuable, feel free to give it a **⭐ star** on GitHub!  
+It helps showcase my work and encourages me to continue building powerful analytics solutions.
