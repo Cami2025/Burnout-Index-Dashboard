@@ -1,3 +1,4 @@
+![Dashboard Banner](./images/banner.png)
 # 🔥 Workload & Burnout Analytics Dashboard  
 ### Monitoring Burnout Index, High-Risk Employees, and Burnout Distribution by Department
 
