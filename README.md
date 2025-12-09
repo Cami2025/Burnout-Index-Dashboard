@@ -1,5 +1,5 @@
 ![Dashboard Banner](./images/banner.png)
-# 🔥 Workload & Burnout Analytics Dashboard  
+# Workload & Burnout Analytics Dashboard  
 ### Monitoring Burnout Index, High-Risk Employees, and Burnout Distribution by Department
 
 This project analyzes employee burnout levels across an organization of 600 workers using **Power BI**, **Google Sheets**, and **People Analytics** principles.  
@@ -7,12 +7,12 @@ The dashboard identifies high-risk employees, highlights department-level patter
 
 ---
 
-## 📸 Dashboard Overview  
+## Dashboard Overview  
 ![Dashboard Preview](./images/portada.png)
 
 ---
 
-## 🧠 Project Methodology
+## Project Methodology
 
 ### 1. Data Cleaning & Standardization
 - Removal of duplicated or inconsistent records  
@@ -101,7 +101,7 @@ Additional visuals include:
 
 ---
 
-## 💡 Key Insights
+## Key Insights
 
 - Clinical departments show higher burnout levels  
 - 33 employees are categorized as **High Risk**  
@@ -110,7 +110,7 @@ Additional visuals include:
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Camila Álvarez**  
 Physical Activity Specialist, Workplace Wellness & People Analytics  
