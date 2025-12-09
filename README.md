@@ -114,7 +114,13 @@ Additional visuals include:
 
 **Camila Álvarez**  
 Physical Activity Specialist, Workplace Wellness & People Analytics  
-GitHub: https://github.com/Cami2025  
+GitHub: https://github.com/Cami2025
+
+# Contact
+
+LinkedIn: www.linkedin.com/in/camilaalvareztafs
+
+Professional email: camianalytics5@gmail.com
 
 ---
 
@@ -122,3 +128,4 @@ GitHub: https://github.com/Cami2025
 
 If you found this project useful, feel free to give the repository a **⭐ star**!  
 Your support helps showcase my work and encourages the creation of more analytics projects.
+
