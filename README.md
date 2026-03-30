@@ -37,6 +37,9 @@ Python was the main tool used for the ETL process and burnout index construction
 - calculating the `indice_burnout`
 - classifying records into `Low`, `Medium`, and `High`
 
+### Example Python transformation
+![Burnout Index Dashboard](assets/python_trasformation.png)
+
 ### 2. Power BI
 Power BI was used to build the dashboard, create KPIs, and visualize the results. The dashboard includes:
 
@@ -95,46 +98,39 @@ burnout-index-dashboard/
 └── data/
 ```
 
-Python ETL
+### Python ETL
 
 The ETL process transformed the original variables into an analytical dataset ready for visualization and validation. Key transformations included:
 
-creating cumplimiento_pausas
-standardizing variables to a 0–10 scale
-converting protective factors into risk-oriented logic
-building the final index as the average of six dimensions
-categorizing the index into burnout levels
+-creating cumplimiento_pausas
+-standardizing variables to a 0–10 scale
+-converting protective factors into risk-oriented logic
+-building the final index as the average of six dimensions
+-categorizing the index into burnout levels
 
-Featured SQL Queries
-
+### Featured SQL Queries
 
 ### Validation query — Total employees evaluated
-
 ```sql
-SELECT COUNT(DISTINCT employee_id) AS total_personas
+SELECT COUNT(DISTINCT employee_id) AS total_employees
 FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
-
 ```
 ### Validation of average burnout index
-
-
 ```sql
-SELECT ROUND(AVG(indice_burnout), 2) AS promedio_indice_burnout
+SELECT ROUND(AVG(indice_burnout), 2) AS average_burnout_index
 FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
-
 ```
-### Validation query — Total employees evaluated
-
+### Burnout distribution by area
 ```sql
 SELECT
   area,
   categoria_burnout,
-  COUNT(DISTINCT employee_id) AS total_personas,
+  COUNT(DISTINCT employee_id) AS total_employees,
   ROUND(
     COUNT(DISTINCT employee_id) * 100.0
     / SUM(COUNT(DISTINCT employee_id)) OVER (PARTITION BY area),
     2
-  ) AS porcentaje_en_area
+  ) AS percentage_within_area
 FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`
 GROUP BY area, categoria_burnout
 ORDER BY
@@ -146,42 +142,43 @@ ORDER BY
     ELSE 99
   END;
 ```
-Documented DAX Logic
-
+### Documented DAX Logic
 Inside the powerbi/ folder, the repository includes a medidas_dax.md file with the main expressions used to document the dashboard logic, including:
 
-total employees evaluated
-average burnout index
-protective factors
-risk factors
-Dashboard
+-total employees evaluated
+-average burnout index
+-protective factors
+-risk factors
+-Dashboard
 
+### Example DAX measure
+```
+Total Employees Evaluated = DISTINCTCOUNT('burnout_analytics'[employee_id])
+```
+### Dashboard
 The dashboard was designed in Power BI to provide an executive-level view of the data, allowing users to analyze:
 
-overall burnout level
-burnout distribution by area
-category composition
-factors that may increase or reduce the index
-
-If you add an image inside assets/, you can display it like this:
+-overall burnout level
+-burnout distribution by area
+-category composition
+-factors that may increase or reduce the index
 
 ![Burnout Index Dashboard](assets/dashboard_general.png)
 
-General Insights
-The index summarizes multiple risk and protective dimensions into a single metric.
-Category distribution helps identify groups that may require closer monitoring.
-Area-level analysis makes it possible to compare risk profiles across teams or units.
-Visualizing risk and protective factors improves the interpretation of the final burnout score.
-Methodology Note
+### General Insights
+-The index summarizes multiple risk and protective dimensions into a single metric.
+-Category distribution helps identify groups that may require closer monitoring.
+-Area-level analysis makes it possible to compare risk profiles across teams or units.
+-Visualizing risk and protective factors improves the interpretation of the final burnout score.
+-Methodology Note
 
 This project did not use BigQuery as the main analytical pipeline source. The burnout index was built in Python, and the dashboard was developed in Power BI. SQL in BigQuery was used as a validation methodology to ensure that DAX results matched direct SQL queries on the uploaded table.
 
-Considerations
-
+### Considerations
 For a public repository, identifiers should be anonymized and sensitive personal data should not be shared.
 
-Author
+### Author
 
-Camila Alvarez
+### Camila Alvarez
 Project developed as part of a data analytics / People Analytics portfolio.
 
