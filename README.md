@@ -179,6 +179,21 @@ For a public repository, identifiers should be anonymized and sensitive personal
 
 ### Author
 
-### Camila Alvarez
-Project developed as part of a data analytics / People Analytics portfolio.
+**Camila Álvarez**  
+Physical Activity Specialist, Workplace Wellness & People Analytics  
+GitHub: https://github.com/Cami2025
+
+# Contact
+
+LinkedIn: www.linkedin.com/in/camilaalvareztafs
+
+Professional email: camianalytics5@gmail.com
+
+---
+
+## ⭐ Support the Project
+
+If you found this project useful, feel free to give the repository a **⭐ star**!  
+Your support helps showcase my work and encourages the creation of more analytics projects.
+
 
