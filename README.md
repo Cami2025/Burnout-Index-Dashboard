@@ -183,7 +183,7 @@ For a public repository, identifiers should be anonymized and sensitive personal
 Physical Activity Specialist, Workplace Wellness & People Analytics  
 GitHub: https://github.com/Cami2025
 
-# Contact
+### Contact
 
 LinkedIn: www.linkedin.com/in/camilaalvareztafs
 
