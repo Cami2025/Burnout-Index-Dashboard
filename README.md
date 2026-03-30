@@ -106,7 +106,10 @@ building the final index as the average of six dimensions
 categorizing the index into burnout levels
 
 Featured SQL Queries
-Validation of total employees evaluated
 
+```md
+### Validation query — Total employees evaluated
+
+```sql
 SELECT COUNT(DISTINCT employee_id) AS total_personas
 FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
