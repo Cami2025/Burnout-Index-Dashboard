@@ -38,7 +38,7 @@ Python was the main tool used for the ETL process and burnout index construction
 - classifying records into `Low`, `Medium`, and `High`
 
 ### Example Python transformation
-![Burnout Index Dashboard](assets/python_trasformation.png)
+![Burnout Index Dashboard](01_assets/python_trasformation.png)
 
 ### 2. Power BI
 Power BI was used to build the dashboard, create KPIs, and visualize the results. The dashboard includes:
