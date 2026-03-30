@@ -123,4 +123,26 @@ SELECT ROUND(AVG(indice_burnout), 2) AS promedio_indice_burnout
 FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
 
 ```
+### Validation query — Total employees evaluated
 
+```sql
+SELECT
+  area,
+  categoria_burnout,
+  COUNT(DISTINCT employee_id) AS total_personas,
+  ROUND(
+    COUNT(DISTINCT employee_id) * 100.0
+    / SUM(COUNT(DISTINCT employee_id)) OVER (PARTITION BY area),
+    2
+  ) AS porcentaje_en_area
+FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`
+GROUP BY area, categoria_burnout
+ORDER BY
+  area,
+  CASE
+    WHEN categoria_burnout = 'Bajo' THEN 1
+    WHEN categoria_burnout = 'Medio' THEN 2
+    WHEN categoria_burnout = 'Alto' THEN 3
+    ELSE 99
+  END;
+```
