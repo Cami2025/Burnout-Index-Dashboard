@@ -107,7 +107,7 @@ categorizing the index into burnout levels
 
 Featured SQL Queries
 
-```md
+```
 ### Validation query — Total employees evaluated
 
 ```sql
