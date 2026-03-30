@@ -113,3 +113,12 @@ Featured SQL Queries
 ```sql
 SELECT COUNT(DISTINCT employee_id) AS total_personas
 FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
+
+```
+### Validation of average burnout index
+
+
+```sql
+SELECT ROUND(AVG(indice_burnout), 2) AS promedio_indice_burnout
+FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
+
