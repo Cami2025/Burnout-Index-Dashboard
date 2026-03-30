@@ -93,6 +93,7 @@ burnout-index-dashboard/
 │   └── dashboard_general.png
 │
 └── data/
+```text
 
 Python ETL
 
