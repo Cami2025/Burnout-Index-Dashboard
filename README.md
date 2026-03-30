@@ -107,7 +107,7 @@ categorizing the index into burnout levels
 
 Featured SQL Queries
 
-```
+
 ### Validation query — Total employees evaluated
 
 ```sql
@@ -121,4 +121,6 @@ FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
 ```sql
 SELECT ROUND(AVG(indice_burnout), 2) AS promedio_indice_burnout
 FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
+
+```
 
