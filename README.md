@@ -146,3 +146,42 @@ ORDER BY
     ELSE 99
   END;
 ```
+Documented DAX Logic
+
+Inside the powerbi/ folder, the repository includes a medidas_dax.md file with the main expressions used to document the dashboard logic, including:
+
+total employees evaluated
+average burnout index
+protective factors
+risk factors
+Dashboard
+
+The dashboard was designed in Power BI to provide an executive-level view of the data, allowing users to analyze:
+
+overall burnout level
+burnout distribution by area
+category composition
+factors that may increase or reduce the index
+
+If you add an image inside assets/, you can display it like this:
+
+![Burnout Index Dashboard](assets/dashboard_general.png)
+
+General Insights
+The index summarizes multiple risk and protective dimensions into a single metric.
+Category distribution helps identify groups that may require closer monitoring.
+Area-level analysis makes it possible to compare risk profiles across teams or units.
+Visualizing risk and protective factors improves the interpretation of the final burnout score.
+Methodology Note
+
+This project did not use BigQuery as the main analytical pipeline source. The burnout index was built in Python, and the dashboard was developed in Power BI. SQL in BigQuery was used as a validation methodology to ensure that DAX results matched direct SQL queries on the uploaded table.
+
+Considerations
+
+For a public repository, identifiers should be anonymized and sensitive personal data should not be shared.
+
+Author
+
+Camila Alvarez
+Project developed as part of a data analytics / People Analytics portfolio.
+
