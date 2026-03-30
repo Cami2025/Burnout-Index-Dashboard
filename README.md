@@ -104,3 +104,9 @@ standardizing variables to a 0–10 scale
 converting protective factors into risk-oriented logic
 building the final index as the average of six dimensions
 categorizing the index into burnout levels
+
+Featured SQL Queries
+Validation of total employees evaluated
+
+SELECT COUNT(DISTINCT employee_id) AS total_personas
+FROM `burnoutindex-490619.burnout_analytics.burnout_analytics`;
