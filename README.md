@@ -163,7 +163,7 @@ The dashboard was designed in Power BI to provide an executive-level view of the
 - category composition
 - factors that may increase or reduce the index
 
-![Burnout Index Dashboard](assets/dashboard_indice_burnout.png)
+![Burnout Index Dashboard](01_assets/dashboard_indice_burnout.png)
 
 ### General Insights
 - The index summarizes multiple risk and protective dimensions into a single metric.
