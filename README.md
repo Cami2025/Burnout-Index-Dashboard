@@ -18,6 +18,11 @@ Develop a comprehensive burnout analysis that would allow:
 - **Power BI**: dashboard development and data visualization
 - **DAX**: KPI and visualization logic in Power BI
 
+## Naming Note
+
+This repository uses English for documentation and project presentation.  
+Some source variables and category labels remain in Spanish to preserve consistency with the original dataset, ETL process, and Power BI model.
+
 ## Project Flow
 
 The project was developed in three complementary layers:
