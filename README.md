@@ -78,7 +78,7 @@ burnout-index-dashboard/
 ├── requirements.txt
 │
 ├── python/
-│   └── 01_etl_burnout_limpio.py
+│   └── 01_etl.py
 │
 ├── sql/
 │   ├── 01_validacion_total_personas.sql
@@ -90,10 +90,11 @@ burnout-index-dashboard/
 │
 ├── powerbi/
 │   ├── dashboard_indice_burnout.pbix
-│   └── medidas_dax.md
+│   
 │
 ├── assets/
-│   └── dashboard_general.png
+│   └── python_transformation.png
+│   └── dashboard_indice_burnout.png
 │
 └── data/
 ```
